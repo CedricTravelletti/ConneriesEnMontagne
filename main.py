@@ -7,7 +7,7 @@ def root():
         {
         'lat':0,
         'lon':0,
-        'popup':'This is the middle of the map.'
+            'popup':'Bonsoir, beauté :)'
         }
     ]
     return render_template('index.html',markers=markers )
