@@ -1,0 +1,16 @@
+{
+  "type": "Feature",
+  "properties": {
+    "rating": 5,
+    "difficulty": "AD",
+    "subjectiveDifficulty": "horrible",
+    "avisMorard": "plus jamais"
+  },
+  "geometry": {
+    "coordinates": [
+      8.12556979635761,
+      46.29467762436792
+    ],
+    "type": "Point"
+  }
+}
