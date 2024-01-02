@@ -11,6 +11,9 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
+     <script src="https://cdn.jsdelivr.net/npm/leaflet-tilelayer-swiss@2.3.0/dist/Leaflet.TileLayer.Swiss.umd.js"
+          crossorigin integrity="sha384-M4p8VfZ8RG6qNiPYA3vOCApQXAlLtnJXVPdydMYPAsvvIDsWp2dqqzF2OEeWWNhy">
+     </script>
     <title>Conneries en Montagne</title>
     <link href="static/css/bootstrap.min.css" rel="stylesheet" />
     <!--[if lt IE 9]>
@@ -58,15 +61,6 @@
 
     <div id="map"></div>
     <script src="{{ url_for('static', filename='js/universal.js') }}" /></script>
-    <script>
-  
-      {% for marker in markers %}
-        L.marker([{{ marker['lat'] }}, {{ marker['lon'] }}]).addTo(map)
-        .bindPopup("{{ marker['popup'] }}")
-        .openPopup();
-      {% endfor %}
-  
-    </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="static/js/bootstrap.min.js"></script>

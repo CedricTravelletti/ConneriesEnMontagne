@@ -1,9 +1,41 @@
-var map = L.map('map').fitWorld();
+var map = L.map('map', {
+  // Use LV95 (EPSG:2056) projection
+  crs: L.CRS.EPSG2056,
+});
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+// Add Swiss layer with default options
+var mapLayer = L.tileLayer.swiss().addTo(map);
+var satelliteLayer = L.tileLayer.swiss({
+  layer: 'ch.swisstopo.swissimage',
+  maxNativeZoom: 28
+});
 
+var baseMaps = {
+  'Map': mapLayer,
+  'Satellite (Swissimage)': satelliteLayer
+};
+
+// Center the map on Switzerland
+map.fitSwitzerland();
+
+// Add layer for hiking trails with controls.
+function makeOutdoorLayer(layer) {
+  return L.tileLayer.swiss({
+    className: 'multiply-blend-layer',
+    format: 'png',
+    layer: layer,
+    maxNativeZoom: 26,
+    opacity: 0.7
+  });
+}
+
+var outdoorLayers = {
+  'Hiking trails': makeOutdoorLayer('ch.swisstopo.swisstlm3d-wanderwege'),
+}
+
+map.setView([46.29467762436792, 8.12556979635761], 22);
+
+L.control.layers(baseMaps, outdoorLayers,{ collapsed: false }).addTo(map);
 
 // Create style for displaying points.
 var geojsonMarkerOptions = {
