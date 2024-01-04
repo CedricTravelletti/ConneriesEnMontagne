@@ -1,6 +1,7 @@
 {
   "type": "Feature",
   "properties": {
+<<<<<<< HEAD
     "ID": 1
     "Name": "Cabanne de Chanrion"
     "altitude": 2461,
@@ -16,6 +17,12 @@
     "Period": "De juillet à septembre"
     "Comment": "",
     "URL": "https://www.sac-cas.ch/fileadmin/Huetten_und_Touren/153_SAC-H%C3%BCtten/Mit_dem_Mountainbike_von_H%C3%BCtte_zu_H%C3%BCtte/Chanrion_FR.pdf"
+=======
+    "rating": 5,
+    "difficulty": "AD",
+    "subjectiveDifficulty": "horrible",
+    "avisMorard": "plus jamais"
+>>>>>>> 81bbf861937e399df5f9f8ebb5ec0c466ad3fdd5
   },
   "geometry": {
     "coordinates": [
