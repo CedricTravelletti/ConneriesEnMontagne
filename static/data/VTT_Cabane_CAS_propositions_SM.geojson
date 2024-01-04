@@ -1,28 +1,21 @@
 {
   "type": "Feature",
   "properties": {
-<<<<<<< HEAD
     "ID": 1
-    "Name": "Cabanne de Chanrion"
-    "altitude": 2461,
-    "nameOftheTour": "Un tour complet pour les vététistes sportifs",
-    "VTT_difficulty": 2,
-    "Endurance_difficulty": 3,
-    "GainOfAltitude": 1100,
-    "LossAltitude": 1100,
+    "Nom": "Cabanne de Chanrion"
+    "Altitude": 2461,
+    "NomDuTour": "Un tour complet pour les vététistes sportifs",
+    "VTT_difficulté": 2,
+    "Endurance_difficulté": 3,
+    "GainAltitude": 1100,
+    "PerteAltitude": 1100,
     "Distance": 28,
-    "Time": "4h30",
+    "Temps": "4h30",
     "Canton": "VS",
-    "Country": "CH",
-    "Period": "De juillet à septembre"
-    "Comment": "",
+    "Pays": "CH",
+    "Période": "De juillet à septembre",
+    "Commentaires": "",
     "URL": "https://www.sac-cas.ch/fileadmin/Huetten_und_Touren/153_SAC-H%C3%BCtten/Mit_dem_Mountainbike_von_H%C3%BCtte_zu_H%C3%BCtte/Chanrion_FR.pdf"
-=======
-    "rating": 5,
-    "difficulty": "AD",
-    "subjectiveDifficulty": "horrible",
-    "avisMorard": "plus jamais"
->>>>>>> 81bbf861937e399df5f9f8ebb5ec0c466ad3fdd5
   },
   "geometry": {
     "coordinates": [
