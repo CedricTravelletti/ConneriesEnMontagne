@@ -83,3 +83,15 @@ var a_itineraries = fetch(
     }
 }).addTo(map).on('click', onPointClick)
 );
+
+var b_itineraries = fetch(
+  vtt_itineraries
+).then(
+  res => res.json()
+).then(
+  data => L.geoJSON(data, {
+    pointToLayer: function (feature, latlng) {
+        return L.circleMarker(latlng, geojsonMarkerOptions);
+    }
+}).addTo(map).on('click', onPointClick)
+);
