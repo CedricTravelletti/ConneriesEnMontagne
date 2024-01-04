@@ -1,0 +1,48 @@
+{
+	"type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 1
+        "Name": "Fux Coktails and Soul Food"
+        "altitude": 652,
+        "adresse": "Bahnhofstrasse 27",
+        "CodePostal": 3930,
+        "Ville": "Visp",
+        "Canton": "VS",
+        "Pays": "CH",
+        "Comments": "",
+      },
+      "geometry": {
+        "coordinates": [
+          7.88144,
+          46.29142
+        ],
+        "type": "Point"
+      }
+    },
+
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 2
+        "Name": "Hotel Restaurant Landhaus"
+        "altitude": 1389,
+        "adresse": "Furkastrasse 735",
+        "CodePostal": 3985,
+        "Ville": "Münster",
+        "Canton": "VS",
+        "Pays": "CH",
+        "Comments": "",
+      },
+      "geometry": {
+        "coordinates": [
+          8.26821,
+          46.48796
+        ],
+        "type": "Point"
+      }
+    }
+  ]
+}
