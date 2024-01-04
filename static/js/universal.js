@@ -69,7 +69,7 @@ function onPointClick(e) {
 }
 
 // Load itineraries asynchronously using Fetch API.
-var cedric_itineraries = "static/data/VTT_Cabane_CAS_propositions_SM.geojson";
+var cedric_itineraries = "static/data/Restau_SM.geojson";
 var vtt_itineraries = "static/data/VTT_Cabane_CAS_propositions_SM.geojson";
 
 var a_itineraries = fetch(
