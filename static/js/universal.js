@@ -33,7 +33,7 @@ var outdoorLayers = {
   'Hiking trails': makeOutdoorLayer('ch.swisstopo.swisstlm3d-wanderwege'),
 }
 
-map.setView([46.29467762436792, 8.12556979635761], 100);
+map.setView([46.29467762436792, 8.12556979635761], 22);
 
 L.control.layers(baseMaps, outdoorLayers,{ collapsed: false }).addTo(map);
 
