@@ -69,23 +69,11 @@ function onPointClick(e) {
 }
 
 // Load itineraries asynchronously using Fetch API.
-var cedric_itineraries = "static/data/cedric_itineraries.geojson";
+var cedric_itineraries = "static/data/VTT_Cabane_CAS_propositions_SM.geojson";
 var vtt_itineraries = "static/data/VTT_Cabane_CAS_propositions_SM.geojson";
 
 var a_itineraries = fetch(
   cedric_itineraries
-).then(
-  res => res.json()
-).then(
-  data => L.geoJSON(data, {
-    pointToLayer: function (feature, latlng) {
-        return L.circleMarker(latlng, geojsonMarkerOptions);
-    }
-}).addTo(map).on('click', onPointClick)
-);
-
-var b_itineraries = fetch(
-  vtt_itineraries
 ).then(
   res => res.json()
 ).then(
