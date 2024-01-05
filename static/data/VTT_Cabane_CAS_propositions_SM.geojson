@@ -1,27 +1,12 @@
 {
-  "type": "Feature",
-  "properties": {
-    "ID": 1
-    "Nom": "Cabanne de Chanrion"
-    "Altitude": 2461,
-    "NomDuTour": "Un tour complet pour les vététistes sportifs",
-    "VTT_difficulté": 2,
-    "Endurance_difficulté": 3,
-    "GainAltitude": 1100,
-    "PerteAltitude": 1100,
-    "Distance": 28,
-    "Temps": "4h30",
-    "Canton": "VS",
-    "Pays": "CH",
-    "Période": "De juillet à septembre",
-    "Commentaires": "",
-    "URL": "https://www.sac-cas.ch/fileadmin/Huetten_und_Touren/153_SAC-H%C3%BCtten/Mit_dem_Mountainbike_von_H%C3%BCtte_zu_H%C3%BCtte/Chanrion_FR.pdf"
-  },
-  "geometry": {
-    "coordinates": [
-      7.38086300090933,
-      45.939136353884301
-    ],
-    "type": "Point"
-  }
+"type": "FeatureCollection",
+"features": [
+{"type": "Feature", "properties": {"ID": 1,"Nom": "Cabanne de Chanrion","Altitude": 2461,"NomDuTour": "Un tour complet pour les vététistes sportifs","VTT_difficulté": 2,"Endurance_difficulté": 3,"GainAltitude": 1100,"PerteAltitude": 1100,"Distance": 28,"Temps": "4h30","Canton": "VS","Pays": "CH","Période": "De juillet à septembre","Commentaires": "","URL": "https://www.sac-cas.ch/fileadmin/Huetten_und_Touren/153_SAC-H%C3%BCtten/Mit_dem_Mountainbike_von_H%C3%BCtte_zu_H%C3%BCtte/Chanrion_FR.pdf
+"},"geometry": { "type": "Point","coordinates": [7.38086300090933,45.939136353884301]}},
+{"type": "Feature", "properties": {"ID": 2,"Nom": "Cabane du Mont-Fort","Altitude": 2456,"NomDuTour": "Dépasser ses limites en downhill","VTT_difficulté": 4,"Endurance_difficulté": 1,"GainAltitude": 150,"PerteAltitude": 2140,"Distance": 21,"Temps": "4h00","Canton": "VS","Pays": "CH","Période": "De juin à octobre","Commentaires": "","URL": "https://www.sac-cas.ch/fileadmin/Huetten_und_Touren/153_SAC-H%C3%BCtten/Mit_dem_Mountainbike_von_H%C3%BCtte_zu_H%C3%BCtte/Mt-Fort_FR.pdf
+"},"geometry": { "type": "Point","coordinates": [7.28108369,46.08358126]}},
+{"type": "Feature", "properties": {"ID": 3,"Nom": "Cabane des Violettes","Altitude": 2209,"NomDuTour": "Une descente aussi belle que le nom de la cabane","VTT_difficulté": 4,"Endurance_difficulté": 5,"GainAltitude": 1230,"PerteAltitude": 1230,"Distance": 28,"Temps": "5h30","Canton": "VS","Pays": "CH","Période": "De juillet à octobre","Commentaires": "","URL": "https://www.sac-cas.ch/fileadmin/Huetten_und_Touren/153_SAC-H%C3%BCtten/Mit_dem_Mountainbike_von_H%C3%BCtte_zu_H%C3%BCtte/Violettes_FR.pdf"},"geometry": { "type": "Point","coordinates": [7.500028335,46.34234684]}},
+{"type": "Feature", "properties": {"ID": 4,"Nom": "Wildstrubelhütte","Altitude": 2788,"NomDuTour": "Une descente sans fin","VTT_difficulté": 5,"Endurance_difficulté": 3,"GainAltitude": 650,"PerteAltitude": 2947,"Distance": 32,"Temps": "4","Canton": "VS","Pays": "CH","Période": "De juillet à septembre","Commentaires": "","URL": "https://www.sac-cas.ch/fileadmin/Huetten_und_Touren/153_SAC-H%C3%BCtten/Mit_dem_Mountainbike_von_H%C3%BCtte_zu_H%C3%BCtte/Wildstrubel_FR.pdf
+"},"geometry": { "type": "Point","coordinates": [7.467811142,46.3829882]}}
+]
 }
