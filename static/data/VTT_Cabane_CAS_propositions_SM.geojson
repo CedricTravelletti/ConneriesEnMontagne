@@ -14,6 +14,11 @@
 "},"geometry": { "type": "Point","coordinates": [8.4101256696703,46.46708789]}},
 {"type": "Feature", "properties": {"ID": 7,"Nom": "Spitzmeilenhütte","Altitude": 2087,"NomDuTour": "Une foule de possibilités","VTT_difficulté": 3,"Endurance_difficulté": 3,"GainAltitude": 900,"PerteAltitude": 1830,"Distance": 35,"Temps": "5h30","Canton": "SG","Pays": "CH","Période": "De juin à octobre","Commentaires": "","URL": "https://www.sac-cas.ch/fileadmin/Huetten_und_Touren/153_SAC-H%C3%BCtten/Mit_dem_Mountainbike_von_H%C3%BCtte_zu_H%C3%BCtte/Spitzmeilen_FR.pdf
 "},"geometry": { "type": "Point","coordinates": [9.25054731400797,47.0342463254958]}},
-
+{"type": "Feature", "properties": {"ID": 8,"Nom": "Rifugio Saoseo","Altitude": 1987,"NomDuTour": "Une sortie en Italie","VTT_difficulté": 3,"Endurance_difficulté": 4,"GainAltitude": 1940,"PerteAltitude": 2810,"Distance": 92,"Temps": "11h00","Canton": "GR","Pays": "CH","Période": "De juillet à octobre","Commentaires": "","URL": "https://www.sac-cas.ch/fileadmin/Huetten_und_Touren/153_SAC-H%C3%BCtten/Mit_dem_Mountainbike_von_H%C3%BCtte_zu_H%C3%BCtte/Saoseo_FR.pdf
+"},"geometry": { "type": "Point","coordinates": [10.1186635234021,46.39707886]}},
+{"type": "Feature", "properties": {"ID": 9,"Nom": "Chamonna Tuoi","Altitude": 2249,"NomDuTour": "Un trail dans les hauteurs de la Basse-Engadine","VTT_difficulté": 3,"Endurance_difficulté": 4,"GainAltitude": 1180,"PerteAltitude": 1910,"Distance": 37,"Temps": "7h00","Canton": "GR","Pays": "CH","Période": "De juillet à octobre","Commentaires": "","URL": "https://www.sac-cas.ch/fileadmin/Huetten_und_Touren/153_SAC-H%C3%BCtten/Mit_dem_Mountainbike_von_H%C3%BCtte_zu_H%C3%BCtte/Tuoi_FR.pdf
+"},"geometry": { "type": "Point","coordinates": [10.13246887,46.8307237667099]}},
+{"type": "Feature", "properties": {"ID": 10,"Nom": "Keschhütte","Altitude": 2627,"NomDuTour": "Prenez votre élan vers l‘Ela: deux cols, quatre vallées","VTT_difficulté": 3,"Endurance_difficulté": 5,"GainAltitude": 1670,"PerteAltitude": 2150,"Distance": 47,"Temps": "7h30","Canton": "GR","Pays": "CH","Période": "De juillet à octobre","Commentaires": "","URL": "https://www.sac-cas.ch/fileadmin/Huetten_und_Touren/153_SAC-H%C3%BCtten/Mit_dem_Mountainbike_von_H%C3%BCtte_zu_H%C3%BCtte/Kesch_FR.pdf
+"},"geometry": { "type": "Point","coordinates": [9.87516828197886,46.6451599486052]}}
 ]
 }
