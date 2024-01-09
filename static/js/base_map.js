@@ -50,7 +50,7 @@ var geojsonMarkerOptions = {
 
 // Define how points behave on click (display infos).
 let popup = L.popup(); // Empty popup holding infos.
-function onPointClick(e) {
+function onItineraryClick(e) {
     var featureProperties = e.layer.feature.properties;
 
 
@@ -63,42 +63,34 @@ function onPointClick(e) {
     content += "<b>L'avis Morard:</b> " + (featureProperties.avisMorard || 'N/A') + "<br>";
 
     // Set and open the popup with the content
-    popup
-        .setLatLng(e.latlng)
-        .setContent(content)
-        .openOn(map);
+    popup.setLatLng(e.latlng).setContent(content).openOn(map);
 }
 
 // Load itineraries asynchronously using Fetch API and add as overlays.
 var itineraries_path = "static/data/cedric_itineraries.geojson";
-var itineraries = fetch(
-  itineraries_path
-).then(
-  res => res.json()
-).then(
-  data => L.geoJSON(data, {
-    pointToLayer: function (feature, latlng) {
+fetch(itineraries_path)
+  .then(res => res.json())
+  .then(
+    data => L.geoJSON(data,{
+      pointToLayer: function (feature, latlng) {
         return L.circleMarker(latlng, geojsonMarkerOptions);
-    }
-})
-).then(res => layerControl.addOverlay(res, "Itineraries")
+      }
+    }).on('click', onItineraryClick))
+  .then(res => layerControl.addOverlay(res, "Itineraries")
 );
 
 var restaurants_path = "static/data/Restau_SM.geojson";
-var restaurants = fetch(
-  restaurants_path
-).then(
-  res => res.json()
-).then(
-  data => L.geoJSON(data, {
+fetch(restaurants_path)
+  .then(res => res.json())
+  .then(data => L.geoJSON(data, {
     pointToLayer: function (feature, latlng) {
-        return L.circleMarker(latlng, geojsonMarkerOptions);
+      return L.circleMarker(latlng, geojsonMarkerOptions);
     }
-  })
-).then(res => {
-  layerControl.addOverlay(res, "Restaurants");
-  map.addLayer(res); // Notice the longer function to make this layer active (added to the map).
-}
+  }))
+  .then(res => {
+    layerControl.addOverlay(res, "Restaurants");
+    map.addLayer(res); // Notice the longer function to make this layer active (added to the map).
+  }
 );
 
 layerControl.addOverlay(itineraries, "Itineraries");
