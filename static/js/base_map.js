@@ -33,9 +33,10 @@ var outdoorLayers = {
   'Hiking trails': makeOutdoorLayer('ch.swisstopo.swisstlm3d-wanderwege'),
 }
 
-map.setView([46.29467762436792, 8.12556979635761], 22);
+map.setView([46.29467762436792, 8.12556979635761], 16);
 
-L.control.layers(baseMaps, outdoorLayers,{ collapsed: false }).addTo(map);
+// Create basic tick box to control layers and overlay.
+var layerControl = L.control.layers(baseMaps, outdoorLayers,{ collapsed: false }).addTo(map);
 
 // Create style for displaying points.
 var geojsonMarkerOptions = {
@@ -68,11 +69,10 @@ function onPointClick(e) {
         .openOn(map);
 }
 
-// Load itineraries asynchronously using Fetch API.
-var cedric_itineraries = "static/data/Restau_SM.geojson";
-
-var a_itineraries = fetch(
-  cedric_itineraries
+// Load itineraries asynchronously using Fetch API and add as overlays.
+var itineraries_path = "static/data/cedric_itineraries.geojson";
+var itineraries = fetch(
+  itineraries_path
 ).then(
   res => res.json()
 ).then(
@@ -80,5 +80,26 @@ var a_itineraries = fetch(
     pointToLayer: function (feature, latlng) {
         return L.circleMarker(latlng, geojsonMarkerOptions);
     }
-}).addTo(map).on('click', onPointClick)
+})
+).then(res => layerControl.addOverlay(res, "Itineraries")
 );
+
+var restaurants_path = "static/data/Restau_SM.geojson";
+var restaurants = fetch(
+  restaurants_path
+).then(
+  res => res.json()
+).then(
+  data => L.geoJSON(data, {
+    pointToLayer: function (feature, latlng) {
+        return L.circleMarker(latlng, geojsonMarkerOptions);
+    }
+  })
+).then(res => {
+  layerControl.addOverlay(res, "Restaurants");
+  map.addLayer(res); // Notice the longer function to make this layer active (added to the map).
+}
+);
+
+layerControl.addOverlay(itineraries, "Itineraries");
+layerControl.addOverlay(restaurants, "Restaurants");
