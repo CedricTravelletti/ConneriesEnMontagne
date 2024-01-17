@@ -50,9 +50,8 @@ var geojsonMarkerOptions = {
 
 // Define how points behave on click (display infos).
 let popup = L.popup(); // Empty popup holding infos.
-function onItineraryClick(e) {
-    var featureProperties = e.layer.feature.properties;
-
+function itineraryPopup(layer) {
+    var featureProperties = layer.feature.properties;
 
     var content = "Feature Properties:<br>";
     content += "<b>Name:</b> " + (featureProperties.rating || 'N/A') + "<br>";
@@ -63,7 +62,11 @@ function onItineraryClick(e) {
     content += "<b>L'avis Morard:</b> " + (featureProperties.avisMorard || 'N/A') + "<br>";
 
     // Set and open the popup with the content
-    popup.setLatLng(e.latlng).setContent(content).openOn(map);
+    // popup.setLatLng(e.latlng).setContent(content).openOn(map);
+    return content;
+}
+function onEachItineraryFeature(feature, layer) {
+  layer.bindPopup(itineraryPopup);
 }
 
 // Load itineraries asynchronously using Fetch API and add as overlays.
@@ -74,8 +77,9 @@ fetch(itineraries_path)
     data => L.geoJSON(data,{
       pointToLayer: function (feature, latlng) {
         return L.circleMarker(latlng, geojsonMarkerOptions);
-      }
-    }).on('click', onItineraryClick))
+      },
+      onEachFeature: onEachItineraryFeature
+    }))
   .then(res => layerControl.addOverlay(res, "Itineraries")
 );
 
@@ -93,5 +97,5 @@ fetch(restaurants_path)
   }
 );
 
-layerControl.addOverlay(itineraries, "Itineraries");
-layerControl.addOverlay(restaurants, "Restaurants");
+// layerControl.addOverlay(itineraries, "Itineraries");
+// layerControl.addOverlay(restaurants, "Restaurants");
