@@ -43,7 +43,15 @@ var geojsonMarkerOptions = {
     radius: 8,
     fillColor: "#ff7800",
     color: "#000",
-    weight: 1,
+    weight: 0.5,
+    opacity: 1,
+    fillOpacity: 0.9
+};
+var ideesSarahMarkerOptions = {
+    radius: 10,
+    fillColor: "#023047",
+    color: "#000",
+    weight: 0.5,
     opacity: 1,
     fillOpacity: 0.8
 };
@@ -53,13 +61,11 @@ let popup = L.popup(); // Empty popup holding infos.
 function itineraryPopup(layer) {
     var featureProperties = layer.feature.properties;
 
-    var content = "Feature Properties:<br>";
-    content += "<b>Name:</b> " + (featureProperties.rating || 'N/A') + "<br>";
-    content += "<b>Rating:</b> " + (featureProperties.rating || 'N/A') + "<br>";
-    content += "<b>Description:</b> " + (featureProperties.description || 'N/A') + "<br>";
-    content += "<b>Difficulty:</b> " + (featureProperties.difficulty || 'N/A') + "<br>";
-    content += "<b>Subjective difficulty:</b> " + (featureProperties.subjectiveDifficulty || 'N/A') + "<br>";
-    content += "<b>L'avis Morard:</b> " + (featureProperties.avisMorard || 'N/A') + "<br>";
+    var content = "<b>" + (featureProperties.name || 'N/A') + "</b><br><hr>";
+    content += "<b>Cotation:</b> " + (featureProperties.cotation || 'N/A') + "<br>";
+    content += "<b>Exposition:</b> " + (featureProperties.exposition || 'N/A') + "<br>";
+    // content += "<b>L'avis Morard:</b> " + (featureProperties.avisMorard || 'N/A') + "<br>";
+    content += "<a href=" + (featureProperties.topoURL || 'N/A') + ">topo</a>";
 
     // Set and open the popup with the content
     // popup.setLatLng(e.latlng).setContent(content).openOn(map);
@@ -93,9 +99,37 @@ fetch(restaurants_path)
   }))
   .then(res => {
     layerControl.addOverlay(res, "Restaurants");
-    map.addLayer(res); // Notice the longer function to make this layer active (added to the map).
   }
 );
 
-// layerControl.addOverlay(itineraries, "Itineraries");
-// layerControl.addOverlay(restaurants, "Restaurants");
+ // Function to update style
+function updateStyle(layer) {
+  console.log("Clicked");
+  var isChecked = document.getElementById('exposed').checked;
+  layer.eachLayer(function (pointLayer) {
+    var hide = (pointLayer.feature.properties.exposition == "E2" && isChecked);
+    pointLayer.setStyle({
+      opacity: hide ? 0 : 1,
+      fillOpacity: hide ? 0 : 1
+    });
+  });
+}
+
+var idees_Sarah_path = "static/data/idees_Sarah.geojson";
+fetch(idees_Sarah_path)
+  .then(res => res.json())
+  .then(data => {
+    return L.geoJSON(data, {
+    pointToLayer: function (feature, latlng) {
+      return L.circleMarker(latlng, ideesSarahMarkerOptions);
+    },
+    onEachFeature: onEachItineraryFeature
+  });
+  })
+  .then(res => {
+    // Event listener for the checkbox
+    document.getElementById('exposed').addEventListener('change', x => updateStyle(res));
+    layerControl.addOverlay(res, "Idées Sarah");
+    map.addLayer(res); // Notice the longer function to make this layer active (added to the map).
+  }
+);
