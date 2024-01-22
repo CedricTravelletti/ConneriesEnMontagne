@@ -1,0 +1,85 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pointe de Drône",
+        "exposition": "E2",
+	"cotation": "5b (5a)",
+	"topoURL": "https://www.camptocamp.org/routes/370006/fr/grande-chenalette-dronalette"
+      },
+      "geometry": {
+        "coordinates": [
+	  7.164531354085312,
+          45.875457002077724
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pain de Sucre du Fourchon",
+        "exposition": "E1",
+	"cotation": "5b (5a)",
+	"topoURL": "https://www.camptocamp.org/routes/456837/fr/pain-de-sucre-du-fourchon-arete-se-zucchero"
+	},
+      "geometry": {
+        "coordinates": [
+          7.139466659487056,
+          45.86688254817244
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Couronne de Bréona",
+        "exposition": "E2",
+	"cotation": "4a (3c)",
+	"topoURL": "https://www.camptocamp.org/routes/54192/fr/couronne-de-breona-traversee-col-de-la-couronne-col-de-breona"
+	},
+      "geometry": {
+        "coordinates": [
+          7.570655259274787,
+          46.09169386117347
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Aiguilles de la Lé",
+        "exposition": "E2",
+	"cotation": "4a (3c)",
+	"topoURL": "https://www.camptocamp.org/routes/56020/fr/aiguilles-de-la-le-traversee-s-n"
+	},
+      "geometry": {
+        "coordinates": [
+          7.6050488081861545,
+          46.08853011833244
+        ],
+        "type": "Point"
+      }
+    },
+ {
+      "type": "Feature",
+      "properties": {
+        "name": "Aiguille du Glacier Rond",
+        "exposition": "E2",
+	"cotation": "3a (3a)",
+	"topoURL": "https://www.camptocamp.org/routes/663085/fr/aiguille-de-la-cabane-aiguille-du-glacier-rond-arete-se-la-balade-"
+	},
+      "geometry": {
+        "coordinates": [
+          7.068115543015892,
+          46.00629566386351
+        ],
+        "type": "Point"
+      }
+    }
+  ]
+}
