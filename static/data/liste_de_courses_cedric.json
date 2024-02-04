@@ -1,0 +1,76 @@
+{
+  "type_activite": "Escalade Longue Voie",
+  "courses": [
+    {
+      "montagne": "Pillier de la Pissechèvre",
+      "voie": "Farinet",
+      "cotation": "6b+ (6a+)",
+      "date": "31.05.2020",
+      "partenaire": "Célien Aymon"
+    },  
+    {
+      "montagne": "Miéville",
+      "voie": "Pilipili",
+      "cotation": "6b+ (6a)",
+      "date": "29.03.2021",
+      "partenaire": "Jonas Maret"
+    }, 
+    {
+      "montagne": "Pointe de Gueuroz",
+      "voie": "Saisons Belles qui Passent",
+      "cotation": "6b+ (6b)",
+      "date": "02.04.2021",
+      "partenaire": "Jonas Maret",
+      "additional_info": "répétée le 21.05.2023 avec Célien Aymon"
+    }, 
+    {
+      "montagne": "Petite Dent de Morcles",
+      "voie": "La Forteresse du Vide",
+      "cotation": "6b+ (6a)",
+      "date": "24.08.2021",
+      "partenaire": "Noé Torrent"
+    }, 
+    {
+      "montagne": "Sanetsch - Les Montons",
+      "voie": "La Vita è Bella",
+      "cotation": "6c (6a+)",
+      "date": "27.08.2021",
+      "partenaire": "Noé Torrent"
+    }, 
+    {
+      "montagne": "Pierre Avoi",
+      "voie": "Pierre à Rois",
+      "cotation": "6b (6a)",
+      "date": "31.08.2021",
+      "partenaire": "Lucien Torrent"
+    }, 
+    {
+      "montagne": "Teufelstalwand",
+      "voie": "Zeichen der Freundschaft",
+      "cotation": "6b+ (6a+)",
+      "date": "19.11.2021",
+      "partenaire": "Eliott Coucet"
+    }, 
+    {
+      "montagne": "Wandflue",
+      "voie": "Toto le Héros",
+      "cotation": "6b+ (6a+)",
+      "date": "21.05.2022",
+      "partenaire": "Gaëtan Bezinge"
+    }, 
+    {
+      "montagne": "Petit Clocher du Portalet",
+      "voie": "La Sud-Est",
+      "cotation": "6c (6a)",
+      "date": "02.07.2022",
+      "partenaire": "Noé Torrent"
+    },
+    {
+      "montagne": "Dorénaz (Tichodrome)",
+      "voie": "La Vérité n'est pas un jeu",
+      "cotation": "6b+ (6a+)",
+      "date": "28.01.2023",
+      "partenaire": "Célien Aymon"
+    }
+  ]
+}

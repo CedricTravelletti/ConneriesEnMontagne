@@ -1,0 +1,92 @@
+{
+  "courses": [
+    {
+      "montagne": "Mont Blanc du Tacul",
+      "voie": "Modica - Noury",
+      "cotation": "TD 5+ M5",
+      "engagement": "III"
+    },  
+    {
+      "montagne": "Spiggegrund",
+      "voie": "Cascades du Spiggegrund",
+    },  
+    {
+      "montagne": "Falaise du Dar",
+      "voie": "Grande Cascade du Dar",
+      "cotation": "WI4+",
+    },  
+    {
+      "montagne": "Nadelhorn, Lenzspitze",
+      "voie": "Face NNE de la Lenzspitze et traversée du Nadelhorn",
+      "cotation": "D",
+      "engagement": "III",
+    },  
+    {
+      "montagne": "Stockhorn (Bern)",
+      "voie": "Voie Mülloch",
+      "cotation": "M5",
+    },  
+    {
+      "montagne": "Adelboden",
+      "voie": "Cascade du Bonderfälle",
+      "cotation": "WI5",
+      "date": "31.05.2020",
+      "partenaire": "Célien Aymon"
+    },  
+    {
+      "montagne": "Gross Simelistock",
+      "voie": "Silberfinger",
+      "cotation": "6b+ (6a+)",
+      "commentaires": "pas donné (6c)"
+    },  
+    {
+      "montagne": "Pointe de Tsallion",
+      "voie": "Voie du Pillier Rouge",
+      "cotation": "D",
+      "engagement": "III"
+    },  
+    {
+      "montagne": "Aiguilles Rouges d'Arolla",
+      "voie": "Les Chemins de Pierre",
+      "cotation": "TD+ 6c (6b)",
+    },  
+    {
+      "montagne": "Tête Noire (Châtelard)",
+      "voie": "Cascade de Tête Noire",
+      "cotation": "WI3",
+      "commentaires": "possibilité de mettre la corde par en haut"
+    },  
+    {
+      "montagne": "Zinalrothorn",
+      "voie": "Traversée Rothorngrat - Arête Nord",
+      "cotation": "D-",
+      "resources externes": "https://passion-alpes.com/topos/"
+    },  
+    {
+      "montagne": "Weissmies",
+      "voie": "Traversée Arête N - Arête SE",
+      "cotation": "AD+",
+    },  
+    {
+      "montagne": "Lagginhorn",
+      "voie": "Arête S",
+      "cotation": "AD-",
+    },  
+    {
+      "montagne": "Aiguilles Marbrées",
+      "voie": "La Retraire avant l'Arthrite",
+      "cotation": "M5 D",
+      "commentaires": "Le site passion-alpes offre plein de bonnes idées pour le mixte."
+      "resources externes": "https://passion-alpes.com/topos/"
+    },  
+    {
+      "montagne": "Jungfrau",
+      "voie": "Arête SE (voie normale), retour sur Blatten",
+      "cotation": "PD+",
+    },  
+    {
+      "montagne": "Gross Muttenhorn",
+      "voie": "D'Oberwald, descente par le Gerental",
+      "commentaires": "Pas mal de possibilités à creuser dans le Gerental."
+    }
+}
