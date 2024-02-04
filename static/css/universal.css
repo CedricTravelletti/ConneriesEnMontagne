@@ -12,7 +12,16 @@ html, body, #map {
     z-index: 1000;
     background: rgba(255, 255, 255, 0.7);
     padding: 10px;
-    left: 50px;
+    left: 40px;
+    margin: 15px;
+    top: 50px;
+    min-height: 50px;
+    min-width: 200px;
+    border-radius: 7px;
+    box-shadow: 1px 1px 1px grey;
+}
+
+#slider {
     margin: 10px;
-    top: 70px;
+    margin-top: 20px;
 }

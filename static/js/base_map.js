@@ -38,6 +38,21 @@ map.setView([46.29467762436792, 8.12556979635761], 16);
 // Create basic tick box to control layers and overlay.
 var layerControl = L.control.layers(baseMaps, outdoorLayers,{ collapsed: false }).addTo(map);
 
+// Slider for flitering itineraries.
+var slider = document.getElementById('slider');
+
+noUiSlider.create(slider, {
+    start: [20, 80],
+    connect: true,
+    range: {
+        'min': 0,
+        'max': 100
+    },
+  orientation: 'horizontal',
+  margin: 300,
+  limit: 600
+});
+
 // Create style for displaying points.
 var geojsonMarkerOptions = {
     radius: 8,
