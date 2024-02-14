@@ -8,6 +8,7 @@ html, body, #map {
 }
 
 #filters {
+    font-size: 80%;
     position: absolute;
     z-index: 1000;
     background: rgba(255, 255, 255, 0.7);
@@ -22,6 +23,16 @@ html, body, #map {
 }
 
 #slider {
+    font-size: 60%;
     margin: 10px;
-    margin-top: 20px;
+    margin-top: 40px;
+    height: 10px;
+}
+#slider .noUi-handle {
+    height: 18px;
+    width: 18px;
+}
+
+.center-text {
+    text-align: center;
 }
