@@ -39,18 +39,28 @@ map.setView([46.29467762436792, 8.12556979635761], 16);
 var layerControl = L.control.layers(baseMaps, outdoorLayers,{ collapsed: false }).addTo(map);
 
 // Slider for flitering itineraries.
-var slider = document.getElementById('slider');
+var sliderDiv = document.getElementById('slider');
+var sliderCotations = ['2a', '4a', '4c', '5a', '5b', '5c',
+  '6a', '6b', '6c', '7a', '9a'];
 
-noUiSlider.create(slider, {
-    start: [20, 80],
-    connect: true,
-    range: {
-        'min': 0,
-        'max': 100
+var format = {
+    to: function(value) {
+        return sliderCotations[Math.round(value)];
     },
-  orientation: 'horizontal',
-  margin: 300,
-  limit: 600
+    from: function (value) {
+        return sliderCotations.indexOf(String(value));
+    }
+};
+
+noUiSlider.create(sliderDiv, {
+    start: ['4a', '6c'],
+    // A linear range from 0 to 15 (16 values)
+    range: { min: 0, max: sliderCotations.length - 1 },
+    // steps of 1
+    step: 1,
+    tooltips: true,
+    format: format,
+    connect: true,
 });
 
 // Create style for displaying points.
