@@ -10,12 +10,12 @@ html, body, #map {
 #filters {
     font-size: 80%;
     position: absolute;
-    z-index: 1000;
+    z-index: 999;
     background: rgba(255, 255, 255, 0.7);
     padding: 10px;
-    left: 40px;
-    margin: 15px;
-    top: 50px;
+    left: 2px;
+    margin: 7px;
+    bottom: 1px;
     min-height: 50px;
     min-width: 200px;
     border-radius: 7px;
