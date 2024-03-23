@@ -9,6 +9,10 @@ def root():
 def itineraire_binntal_2jours():
     return render_template('binntal-ski-2-jours.html')
 
+@app.route('/japon_jordan_chloe')
+def japon_jordan_chloe():
+    return render_template('japon_jordan_chloe.html')
+
 
 if __name__ == '__main__':
     app.run(host="localhost", port=8080, debug=True)
